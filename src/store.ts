@@ -7,7 +7,8 @@ interface Store {
     addToCart: (product: Product) => void,
     increaseQuantity: (id: Product['id']) => void,
     decreaseQuantity: (id: Product['id']) => void,
-    deleteItem: (id: Product['id']) => void
+    deleteItem: (id: Product['id']) => void,
+    clearOrder: () => void
 }
 
 const MIN_ITEMS = 1;
@@ -76,5 +77,10 @@ export const useStore = create<Store>((set, get) => ({
                 order: state.order.filter( item => item.id !== product.id)
             }));
         }
+    },
+    clearOrder: () => {
+        set(() => ({
+            order: []
+        }));
     }
 }));

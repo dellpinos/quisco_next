@@ -48,7 +48,3 @@ model OrderProducts {
     product   Product @relation(fields: [productId], references: [id])
     quantity    Int
 }
-
-// Migrar:
-// npx prisma migrate dev
-// added quantity to orderproducts
