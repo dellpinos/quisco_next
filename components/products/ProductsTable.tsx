@@ -1,15 +1,14 @@
 import { formatCurrency } from "@/src/utils"
-import { Category, Product } from "@prisma/client"
-import Link from "next/link"
 import { ProductsWithCategory } from "@/app/admin/products/page";
+import Link from "next/link";
 
 type ProductTableProps = {
     products: ProductsWithCategory
 }
 
-export default function ProductTable({ products }: ProductTableProps) {
+export default function ProductsTable({ products }: ProductTableProps) {
     return (
-        <div className="px-4 sm:px-6 lg:px-8 mt-20">
+        <div className="px-4 sm:px-6 lg:px-8 my-20">
             <div className="mt-8 flow-root ">
                 <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8 bg-white p-5 ">
